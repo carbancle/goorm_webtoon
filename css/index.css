@@ -1,0 +1,230 @@
+@charset "UTF-8";
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --color-webtoon-green: #00dc64;
+  /* 신규 색상 정의 */
+  --color-line-secondary: #ebebeb;
+}
+
+* {
+  font-family: "Pretendard", sans-serif;
+}
+
+.navbar .container-fluid {
+  width: 1190px;
+  margin: 0 auto;
+}
+
+.brand-navbar .bar {
+  display: flex;
+  align-items: center;
+  color: var(--bs-border-color);
+}
+
+.global-navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.global-navbar li a {
+  padding: 0 18px !important;
+  line-height: 55px;
+  font-weight: 600;
+}
+.global-navbar li a.active {
+  background: var(--color-webtoon-green);
+  color: white !important;
+}
+
+.sub-navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.sub-navbar li {
+  margin-right: 20px;
+}
+.sub-navbar li a.active {
+  position: relative;
+  color: var(--color-webtoon-green) !important;
+}
+.sub-navbar li a.active::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: var(--color-webtoon-green);
+}
+
+.new-webtoon {
+  width: 1190px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.new-webtoon article {
+  padding: 0;
+}
+.new-webtoon .row {
+  width: 100%;
+  margin-left: 0;
+}
+.new-webtoon .row > div {
+  padding: 0;
+}
+.new-webtoon .more-new-webtoon {
+  position: relative;
+  text-decoration: none;
+  color: #666;
+  z-index: 30;
+}
+
+.new-webtoon .col-4 .webtoon-box {
+  border: none;
+  margin-right: 12px;
+}
+.new-webtoon .col-4 .webtoon-box .card-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 165px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: visible;
+}
+.new-webtoon .col-4 .webtoon-box .card-img img {
+  position: absolute;
+  bottom: 1px;
+  z-index: 20;
+}
+.new-webtoon .col-4 .webtoon-box .card-img img:nth-of-type(1) {
+  width: 237px;
+  height: 164px;
+}
+.new-webtoon .col-4 .webtoon-box .card-img img:nth-of-type(2) {
+  width: 207px;
+  height: 164px;
+}
+.new-webtoon .col-4 .webtoon-box .card-img img:nth-of-type(3) {
+  width: 226px;
+  height: 181px;
+}
+.new-webtoon .col-4 .webtoon-box .card-img:hover img {
+  transform: scale(1.2);
+  transform-origin: bottom;
+  transition: all 0.7s;
+}
+.new-webtoon .col-4 .webtoon-box .card-title a {
+  font-size: 0.95rem;
+  font-weight: bold;
+  letter-spacing: -0.4px;
+}
+.new-webtoon .col-4 .webtoon-box .card-subtitle a, .new-webtoon .col-4 .webtoon-box .card-text a {
+  font-size: 0.9rem;
+  letter-spacing: -0.4px;
+}
+.new-webtoon .col-4 .webtoon-box .new-webtoon-link:hover {
+  text-decoration: underline;
+}
+.new-webtoon .col-4:last-child .webtoon-box {
+  margin-right: 0;
+}
+.new-webtoon .col-4 .card-body {
+  margin-top: 10px;
+  padding: 0;
+}
+
+.ad-card {
+  margin-top: 32px;
+  margin-left: 30px;
+}
+.ad-card img {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 5%;
+  border-radius: 0;
+}
+
+.day-webtoon {
+  width: 1190px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.day-webtoon article {
+  padding: 0;
+}
+.day-webtoon article .row {
+  margin-left: 0;
+  margin-right: 0;
+  border: 1px solid var(--color-line-secondary);
+}
+.day-webtoon article .row > .col {
+  padding: 0;
+  border-right: 1px solid var(--color-line-secondary);
+}
+.day-webtoon article .row > .col:last-child {
+  border-right: none;
+}
+.day-webtoon .day-box .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  font-weight: bold;
+}
+.day-webtoon .day-box .today {
+  background-color: #00dc64;
+  color: white;
+}
+.day-webtoon .day-box .card {
+  margin: 0 auto;
+  margin-top: 25px;
+  border: none;
+  background-color: transparent;
+}
+.day-webtoon .day-box .card .poster-img {
+  width: 160px;
+  height: 207px;
+  overflow: hidden;
+  /* img가 div를 벗어나지 않게 함 */
+  position: relative;
+  /* img의 위치를 제어하기 위해 필요할 수 있음 */
+}
+.day-webtoon .day-box .card .poster-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.day-webtoon .day-box .card .poster-img img:hover {
+  transform: scale(1.05);
+}
+.day-webtoon .day-box .card .card-body {
+  padding: 5px 0;
+}
+.day-webtoon .day-box .card .card-body a {
+  color: black;
+  text-decoration: none;
+}
+.day-webtoon .day-box .card .card-body a:hover {
+  text-decoration: underline;
+}
+.day-webtoon .today {
+  background-color: #ccf8e0;
+}
+
+footer {
+  background: #e5e5e5;
+  margin-top: 20px;
+  padding: 40px 0;
+}
+footer section {
+  width: 1190px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=index.css.map */
